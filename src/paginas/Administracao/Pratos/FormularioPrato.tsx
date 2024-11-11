@@ -45,7 +45,7 @@ const FormularioPrato = () => {
     http
       .get<IRestaurante[]>("restaurantes/")
       .then((resposta) => setRestaurantes(resposta.data));
-  }, []);
+  }, [parametros.id]);
 
   const selecionarArquivo = (evento: React.ChangeEvent<HTMLInputElement>) => {
     if (evento.target.files?.length) {
